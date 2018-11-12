@@ -1,0 +1,151 @@
+html
+    font-family: 'Lato', sans-serif
+body
+    font-family: 'Lato', sans-serif
+    counter-reset: how_it_works
+
+a
+    color: $submain
+    text-decoration: none
+
+.container
+    width: 100%
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 15px
+
+.input
+    text-align: center
+    font-size: 18px
+    +border-radius(30px)
+    border: 0
+    border: 2px solid $turquoise
+    outline: none
+.button
+    display: flex
+    margin: 0 auto
+    font-size: 20px
+    font-weight: bold
+    text-align: center
+    border: 0
+    color: white
+    background-color: $orange
+    outline: none
+    cursor: pointer
+    &--big
+        padding: 20px 50px
+        +border-radius(40px)
+    &--small
+        padding: 15px 40px
+        +border-radius(30px)
+    &--submit
+        margin: 0
+        margin-left: auto
+        padding: 10px 60px
+    &--form
+        width: calc( 50% - 20px )
+        margin: 0
+        margin-left: auto
+        padding: 15px
+        justify-content: center
+        font-weight: normal
+        +border-radius(30px)
+    &--accordion
+        display: flex
+        text-align: left
+        background: transparent
+        border: 0
+
+.btn-expand
+    font-size: 18px
+    font-weight: 900
+    text-decoration: underline
+    border: 0
+    outline: none
+    cursor: pointer
+    background-color: transparent
+    &--white
+        color: white
+    &--turquoise
+        padding-left: 40px
+        color: $turquoise
+
+.select-hidden
+    display: none
+    visibility: hidden
+    padding-right: 10px
+
+.select
+    cursor: pointer
+    display: inline-block
+    position: relative
+    font-size: 16px
+    font-weight: 400
+    color: black
+    width: 270px
+    height: 60px
+    +border-radius(60px)
+
+.select-styled
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 270px
+    height: 60px
+    font-size: 18px
+    font-weight: 900
+    line-height: 1
+    color: #303030
+    background-color: #fafafa
+    -webkit-transition: all 0.3s ease-in-out
+    -moz-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+    overflow: hidden
+    +border-radius(60px)
+    &:after
+        content: ""
+        position: absolute
+        right: 25px
+        left: auto
+        bottom: auto
+        width: 16px
+        height: 9px
+        background: transparent url('../images/icons/icon-down.png') no-repeat center center
+        background-size: 16px
+        
+    &:hover
+        background-color: #f0f0f0
+    &:active, &.active
+        background-color: #f0f0f0
+        &:after
+            -webkit-transform: rotateX(180deg)
+            -ms-transform: rotateX(180deg)
+            transform: rotateX(180deg)
+
+.select-options
+    display: none
+    position: absolute
+    max-height: 250px
+    overflow-y: scroll
+    top: 100%
+    right: 0
+    left: 0
+    z-index: 100
+    text-align: center
+    margin: 0!important
+    padding: 0!important
+    list-style: none
+    li
+        margin: 0
+        padding: 15px!important
+        background-color: #fafafa
+        &:hover
+            color: white
+            background: $orange
+
+    &[rel="hide"]
+        display: none
+        &:before
+            display: none
+    &::-webkit-scrollbar
+        width: 3px!important

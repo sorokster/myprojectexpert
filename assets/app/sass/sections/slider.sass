@@ -1,0 +1,163 @@
+.slider
+    .owl-dots
+        margin-top: 20px
+        display: flex
+        flex-direction: row
+        justify-content: center
+        .owl-dot
+            width: 15px
+            height: 15px
+            margin: 0 3px
+            outline: none
+            +border-radius(100%)
+            background-color: #ebebeb
+            &.active
+                background-color: $turquoise
+    .owl-nav
+        button
+            position: absolute
+            top: 50%
+            -webkit-transform: translateY(-50%)
+            -moz-transform: translateY(-50%)
+            transform: translateY(-50%)
+            width: 20px!important
+            height: 40px!important
+            &.owl-next
+                right: calc( -80px )!important
+            &.owl-prev
+                left: calc( -80px )!important
+            span
+                display: none
+            &.owl-next
+                background: transparent url('../images/icons/icon-next.png') no-repeat center center!important
+                background-size: 20px!important
+            &.owl-prev
+                background: transparent url('../images/icons/icon-prev.png') no-repeat center center!important
+                background-size: 20px!important
+    &--experts
+        .item
+            display: flex
+            flex-direction: column
+            justify-content: center
+            width: 100%
+            max-width: 320px
+            margin: 0 auto
+            padding: 40px 25px
+            background-color: #f8f8f8
+            &__avatar
+                width: 100px
+                height: 100px
+                margin: 0 auto 25px
+                overflow: hidden
+                +border-radius(100%)
+                background-color: green
+            &__name
+                margin-bottom: 5px
+                text-align: center
+                font-size: 20px
+                font-weight: 900
+                color: #303030
+            &__career
+                margin-bottom: 30px
+                text-align: center
+                font-size: 15px
+                color: #303030
+            &__table
+                display: flex
+                flex-direction: column
+            &__row                  
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                align-items: flex-end
+                margin-bottom: 10px
+                &:last-child
+                    margin-bottom: 0
+                .title
+                    font-size: 18px
+                    color: $main
+                .rating
+                    font-size: 20px
+                    font-weight: 900
+                    color: $turquoise
+            &__feedback
+                margin-top: 20px
+                font-size: 14px
+                font-weight: 300
+                text-align: center
+            &__categories
+                margin-top: 40px
+                margin-bottom: 50px
+                .list
+                    display: flex
+                    flex-direction: row
+                    flex-wrap: wrap
+                    justify-content: space-around
+                    &__item
+                        display: flex
+                        margin: 5px
+                        padding: 5px 10px
+                        font-size: 15px
+                        font-weight: bold
+                        background-color: white
+                        +border-radius(10px)
+
+    &--testimonials
+        width: 100%
+        max-width: 770px
+        margin: 0 auto
+        .item
+            margin: 0 15px
+            padding: 25px 30px
+            background-color: #f8f8f8
+            &__header
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                align-items: center
+                margin-bottom: 10px
+                .name
+                    font-size: 18px
+                    font-weight: 900
+                    color: $main
+                .rating
+                    margin-left: 25px
+            &__date
+                margin-bottom: 15px
+                font-size: 15px
+                line-height: 
+                color: $black
+            &__description
+                height: 96px
+                overflow: hidden
+                font-size: 16px
+                font-weight: 300
+                line-height: 24px
+                color: $main
+
+    &--reasons
+        display: none
+        max-width: 300px
+        margin: 0 auto
+        .owl-nav
+            button
+                top: 100px
+        .item
+            &__image
+                width: 200px
+                height: 200px
+                margin: 0 auto
+                overflow: hidden
+            &__title
+                padding: 10px
+                text-align: center
+                font-size: 20px
+                font-weight: 900
+                color: white
+                background: $turquoise
+
+            &__description
+                text-align: center
+                font-size: 18px
+                line-height: 30px
+                color: $main

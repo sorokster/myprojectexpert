@@ -1,0 +1,45 @@
+.section--writing-offer
+    .writing-offer
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        max-width: 930px
+        margin: 0 auto
+        &__item
+            width: calc( 50% - 40px )
+            flex: 1 1 auto
+            &--form
+                display: flex
+                justify-content: center
+                align-items: center
+                max-width: 400px
+                background-color: $turquoise
+            .form
+                display: flex
+                flex-direction: column
+                .select
+                    margin-bottom: 20px
+            .list
+                display: flex
+                flex-direction: column
+                max-width: 420px
+                &__item
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    min-height: 80px
+                    margin-bottom: 20px
+                    border: 2px solid $turquoise
+                    +border-radius(80px)
+                    &:last-child
+                        margin-bottom: 0
+                &__title
+                    margin-bottom: 5px
+                    font-size: 18px
+                    font-weight: 900
+                    text-transform: uppercase
+                    color: $submain
+                &__description
+                    line-height: 20px
+            

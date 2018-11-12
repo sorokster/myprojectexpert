@@ -1,0 +1,59 @@
+.header
+    position: relative
+    width: 100%
+    height: 80px
+    background-color: white
+    &__container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+    &__logo
+        flex: 0 1 auto
+    &__info
+        flex: 1 1 auto
+        margin-left: 150px
+        .info
+            display: flex
+            flex-direction: row
+            justify-content: left
+            align-items: center
+            &__item
+                display: flex
+                align-items: center
+                margin-left: 50px
+                line-height: 80px
+                &:before
+                    content: ""
+                    display: block
+                    margin-right: 10px
+                &--phone
+                    &:before
+                        width: 16px
+                        height: 22px
+                        background: no-repeat url('../images/icons/icon-phone.png') center center
+                        background-size: 16px
+                &--mail
+                    &:before
+                        width: 22px
+                        height: 16px
+                        background: no-repeat url('../images/icons/icon-email.png') center center
+                        background-size: 22px
+                &--account
+                    &:before
+                        width: 20px
+                        height: 22px
+                        background: no-repeat url('../images/icons/icon-avatar.png') center center
+                        background-size: 20px
+                &:last-child
+                    margin-left: auto
+                    text-transform: uppercase
+            &__link
+                font-size: 14px
+                font-weight: bold
+
+    &--transparent
+        position: absolute
+        background: transparent
+                
+
